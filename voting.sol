@@ -1,4 +1,4 @@
-//SPDX-License-Identifier
+//SPDX-License-Identifier:MIT
 
 pragma solidity ^0.8.9;
 
@@ -79,8 +79,9 @@ contract voting{
         VD.Topic = _topic;
     //the poll/vote is set to true here and this allow the users to able to vote
         VD.voteCreated = true;
-        return(ID, "Created Succesfully");
+        uint currentId = ID;
         ID++;
+        return(currentId, "Created Succesfully");
     }
 
     //this function allows the user to vote 
